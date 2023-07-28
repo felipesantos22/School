@@ -12,6 +12,11 @@ public class StudentController {
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
+
+    @GetMapping
+    public String Hello(){
+        return "Hello Word!";
+    }
     @PostMapping
     public Student readStudent(@RequestBody Student student) {
         return studentService.createService(student);
