@@ -1,16 +1,19 @@
 package com.br.school.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.br.school.entity.Student;
+import com.br.school.service.StudentService;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/student")
 public class StudentController {
+     private final StudentService studentService;
 
-    @GetMapping
-    public String readStudent(){
-        return "Hello Word!";
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
     }
-
+    @PostMapping
+    public Student readStudent(@RequestBody Student student) {
+        return studentService.createService(student);
+    }
 }
