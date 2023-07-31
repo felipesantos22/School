@@ -1,3 +1,4 @@
+/*
 package com.br.school.entity;
 
 import jakarta.persistence.*;
@@ -26,3 +27,4 @@ public class Discipline {
 
 
 }
+*/
