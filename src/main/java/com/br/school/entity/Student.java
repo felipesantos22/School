@@ -1,5 +1,4 @@
 package com.br.school.entity;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -21,7 +20,7 @@ public class Student {
 
     @ManyToOne
     @JoinColumn(name = "course_id", referencedColumnName = "id")
-    @JsonIgnoreProperties("student")
+    @JsonIgnoreProperties("students")
     private Course course;
 
     @OneToOne
